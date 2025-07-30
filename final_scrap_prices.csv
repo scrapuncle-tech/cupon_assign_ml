@@ -1,0 +1,41 @@
+Name of Item,Rate,Unit,Per 100 kg Space,Profit Margin,Max Allowed Price,Logistic Cost,Competitor Kabadiwala Online,Competitor_Scrapbuddy_Price,Competitor_RecycleBaba_Price,Competitor_DumpitIndia_Price,Competitor_KabadiExpress_Price
+Newspaper,14,kg,Medium,20,17,Low,14,13,7,11,14
+Copies/Books,12,kg,Medium,20,14,Low,13,13,13,12,13
+Cardboard,8,kg,High,15,10,Medium,7,8,5,5,7
+Office Paper (A3/A4),14,kg,Medium,20,17,Low,13,13,13,,
+PET Bottles/Other Plastic,8,kg,High,15,10,Medium,12,12,11,10,12
+Iron,24,kg,Low,12,28,Least,26,27.5,18.5,10,25
+Steel Utensils,40,kg,Low,12,48,Least,45,50,40,37,40
+Aluminium,105,kg,Least,12,126,Very Low,140,130,108,105,130
+Brass,305,kg,Least,12,366,Very Low,400,350,315,305,370
+Copper,425,kg,Least,12,510,Very Low,570,550,430,425,550
+Split AC Copper Coil 1.5 Ton (Indoor + Outdoor),4150,piece,Max,10,4980,High,4500,4500,4150,3200,4500
+Window AC 1.5 Ton (Copper Coil),4050,piece,Max,10,4860,High,4500,4500,4150,3200,4500
+SPLIT/WINDOW AC 1 Ton (Copper Coil),3000,piece,Max,10,3600,High,3200,3500,3100,,
+WINDOW/SPLIT AC 2 Ton (Copper Coil),5600,piece,Max,10,6720,High,5700,5000,4550,4000,5500
+Front Load Fully Automatic Washing Machine,1350,piece,Max,10,1620,High,1000,1000,700,850,750
+Top Load Fully Automatic Washing Machine,1000,piece,Max,10,1200,High,850,1000,700,700,750
+Semi Automatic Washing Machine (Double Drum),750,piece,Max,10,900,High,750,700,600,,600
+Single Door Fridge,1200,piece,Max,10,1440,High,900,1000,1050,850,800
+Double Door Fridge,1350,piece,Max,10,1620,High,1200,1500,1550,1250,1200
+Iron Cooler,24,kg,Max,10,29,High,,,,,
+Plastic cooler,15,kg,Max,10,18,High,,,,,
+Geyser,20,kg,Medium,20,24,Low,16,20,27.5,20,600
+Printer/scanner/fax machine,20,kg,Medium,20,24,Low,20,750,112.5,,
+Metal E-waste,28,kg,Medium,30,34,Low,,,,,
+Plastic E-waste,15,kg,Medium,20,18,Low,,,,,
+CRT TV,200,piece,Medium,15,240,Medium,180,150,150,170,160
+Ceiling Fan,35,kg,Medium,20,42,Low,27,25,24,150,50
+Motors (Copper wiring),35,kg,Low,12,42,Least,50,,,,
+Microwave,350,piece,Medium,20,420,Low,250,200,210,200,200
+UPS,180,piece,Low,12,216,Least,45,450,180,220,450
+Inverter/Stabilizer (Copper Coil),40,kg,Low,12,48,Least,60,40,45,46,60
+Battery(used with inverters),81,kg,Least,12,97,Very Low,80,80,75,75,82.5
+Scrap Laptop,300,piece,Medium,20,360,Low,350,300,200,300,300
+CRT Monitor,150,piece,Medium,20,180,Low,180,,,180,
+LCD Monitor,20,kg,Medium,20,24,Low,30,200,15,17,25
+Computer CPU,225,piece,Medium,20,270,Low,300,600,250,,
+Bike,2100,piece,Max,10,2520,High,2200,6000,2100,2500,2200
+Car,20000,piece,Max,10,24000,High,18000,62500,20000,20000,18000
+Clothes (Accepted only when given with other scrap items),8,kg,Medium,20,9,Low,,,,2,
+Glass bottles (Accepted only when given with other scrap items),2,kg,Medium,20,3,Low,3,,,2,
