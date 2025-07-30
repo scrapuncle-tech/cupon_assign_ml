@@ -1,0 +1,247 @@
+{
+  "summary": "User will pay Agent 2 rupees for the old and new clothes. Agent will be waiting for the T.V. for the next few days. ",
+  "duration": 174.1,
+  "sentiment": "Neutral",
+  "sentiment_score": -0.033,
+  "topic": "Offers & Promotions"
+}
+
+{
+  "summary": "User wants to buy 10-12 tons of steel from Kutki Steel for 40 rupees per cup. He will share a photo of the high list with Agent.",
+  "duration": 54.65,
+  "sentiment": "Neutral",
+  "sentiment_score": 0.011,
+  "topic": "Process & Procedures"
+}
+
+{
+  "summary": "User's pick up will be around 4 to 5 pm today. Agent will try to pick it up before that. User wants it done as fast as possible.",
+  "duration": 54.43,
+  "sentiment": "Neutral",
+  "sentiment_score": 0.219,
+  "topic": "Offers & Promotions"
+}
+
+{
+  "summary": "Agent wants to know what Scrap is. The price of scrap is confirmed by system prices. It will be 50 kgs.",
+  "duration": 95.47,
+  "sentiment": "Neutral",
+  "sentiment_score": -0.081,
+  "topic": "Process & Procedures"
+}
+
+{
+  "summary": "The exercise is almost 2 years old and is not being used. It is just kept there, so it is not used. Agent doesn't think it's recorded.",
+  "duration": 87.19,
+  "sentiment": "Negative",
+  "sentiment_score": -0.59,
+  "topic": "Offers & Promotions"
+}
+
+{
+  "summary": "User wants to pick up from A103 today, but the phone is in a secure state. The pick up can be scheduled for tomorrow for 9th day. Agent will call him first.",
+  "duration": 54,
+  "sentiment": "Neutral",
+  "sentiment_score": 0.141,
+  "topic": "Process & Procedures"
+}
+
+
+{
+  "summary": "User is late for the bus. He will take a look at the camera. Agent will book his appointment for tomorrow itself. ",
+  "duration": 46.22,
+  "sentiment": "Neutral",
+  "sentiment_score": -0.181,
+  "topic": "Process & Procedures"
+}
+
+
+{
+  "summary": "Agent has booked a pick-up service to pick up the stuff from his place in Gogaon yesterday, but no one has called him yet. The service will come today and will call him before they come.",
+  "duration": 172.15,
+  "sentiment": "Neutral",
+  "sentiment_score": -0.333,
+  "topic": "Offers & Promotions"
+}
+
+
+{
+  "summary": "Ma'am deals with medical plastic papers and recyclables instead of wooden scraps at the agent's place.    She is hearing Agent's voice.",
+  "duration": 49.18,
+  "sentiment": "Neutral",
+  "sentiment_score": -0.145,
+  "topic": "Process & Procedures"
+}
+
+
+{
+  "summary": "Agent has 200 tons of iron. He wants to know who has his WhatsApp number. He will keep salvaging these guys. ",
+  "duration": 36.43,
+  "sentiment": "Neutral",
+  "sentiment_score": 0.016,
+  "topic": "Offers & Promotions"
+}
+
+
+{
+  "summary": "User needs to give Agent some items for the car. The infotainment system is reading the vehicle. The person in charge of the system will give him a photo of it. There is a machine part that is used for braking.",
+  "duration": 177.98,
+  "sentiment": "Neutral",
+  "sentiment_score": -0.079,
+  "topic": "Process & Procedures"
+}
+
+{
+  "file_name": "56f9c1529f87768a6ebe81ba8b9b1971.mp3",
+  "summary": "User wants to watch a game at Gurgaon sector 56 tomorrow at 8 PM. All the sports schools are open today, but it won't be possible today.",
+  "duration": 35.28,
+  "sentiment": "Neutral",
+  "sentiment_score": -0.195,
+  "topic": "Offers & Promotions"
+}
+
+
+{
+  "file_name": "82bd8a68392ce618568467cee64b1971.mp3",
+  "summary": "User has two Dayton's split ACs. They cost 14,150 and cardboard is 8 rupees per kilo. Agent is at the Junsup's office.",
+  "duration": 67.18,
+  "sentiment": "Neutral",
+  "sentiment_score": -0.11,
+  "topic": "Process & Procedures"
+}
+
+{
+  "file_name": "88fe5b7d5a34957896f406b00d221971.mp3",
+  "summary": "Agent had booked from the staff uncle for an hour. Yesterday he got a call for confirmation and today he had to pick them up at 12 o'clock. They cut the call in his face. He will try to call them again.",
+  "duration": 125.86,
+  "sentiment": "Neutral",
+  "sentiment_score": -0.232,
+  "topic": "Process & Procedures"
+}
+
+
+{
+  "file_name": "693a9bf6bb8d8599020ef5e2ed8f1971.mp3",
+  "summary": "User's book will be ready by 4 to 5 pm. Agent booked it from 11 to 3 pm. User will call him half an hour before she comes.",
+  "duration": 38.95,
+  "sentiment": "Neutral",
+  "sentiment_score": 0.021,
+  "topic": "Process & Procedures"
+}
+
+
+{
+  "file_name": "836c73122eea91a7eda97c6352ce1971.mp3",
+  "summary": "User wants to sell his LG washing machine for Rs. 1350. The front load is in good condition and the machine is in working order.",
+  "duration": 34.2,
+  "sentiment": "Positive",
+  "sentiment_score": 0.802,
+  "topic": "Offers & Promotions"
+}
+
+
+{
+  "file_name": "2675fd66baac9d50a26b1228377d1971.mp3",
+  "summary": "Shravan lives in Gurnau, in sector 43. He has a lot of trash. User can't book from the agent's app.",
+  "duration": 30.46,
+  "sentiment": "Negative",
+  "sentiment_score": -0.896,
+  "topic": "Process & Procedures"
+}
+
+
+{
+  "file_name": "6197a51aa0c5b072008ae8c27f691971.mp3",
+  "summary": "User is taking the 40 to 50% stabilized and stabilized rate. The stabilizer weight is Rs. 40. Agent will give him the weight that they have. He has two more orders. He will share it on the app or on the website tomorrow.",
+  "duration": 55.44,
+  "sentiment": "Neutral",
+  "sentiment_score": 0.082,
+  "topic": "Process & Procedures"
+}
+
+
+{
+  "file_name": "8612e3d07ad904d00416457fe1161971.mp3",
+  "summary": "Agent wants to be a partner in this function. He has sent the car for this. He is talking to the customer about the TV.",
+  "duration": 26.86,
+  "sentiment": "Neutral",
+  "sentiment_score": 0.229,
+  "topic": "Process & Procedures"
+}
+
+
+{
+  "file_name": "27141c53197a92253cf4b8fbb1cc1971.mp3",
+  "summary": "Agent will put 100Kgleton LTI in the ambulance. He is taking recyclable scrap paper, medical plastic paper, electronic e-waste and plastic bottles. He will pay 8 rupees per bottle.",
+  "duration": 91.73,
+  "sentiment": "Neutral",
+  "sentiment_score": -0.209,
+  "topic": "Process & Procedures"
+}
+
+
+ "file_name": "036545bc053fbea7d48f08dbf0e11971.mp3",
+  "summary": "User booked Agent's hotel on the name of Pudan Tijer. Agent booked his hotel on Unam Saneja's name. The hotel is in the 3rd floor, on the third floor. ",
+  "duration": 245.45,
+  "sentiment": "Neutral",
+  "sentiment_score": -0.043,
+  "topic": "Process & Procedures"
+
+
+{
+  "file_name": "1673012694d8f3f83151807e98bf1971.mp3",
+  "summary": "Agent is in South City 1, Gurgaon. He has a lot of old washing machines. The top load costs 1000 rupees. The price of clothes is 2 rupees per KG. He can only pick it up tomorrow. He will add it to his account.",
+  "duration": 73.44,
+  "sentiment": "Neutral",
+  "sentiment_score": -0.416,
+  "topic": "Process & Procedures"
+}
+
+
+{
+  "file_name": "a6d1c0d048c57b4d2944e9c892f81971.mp3",
+  "summary": "Agent bought Iron Almeida for 24 rupees 6.6 kgs from Scrap Uncle. There were five viewers at the event.",
+  "duration": 55.15,
+  "sentiment": "Neutral",
+  "sentiment_score": -0.005,
+  "topic": "Process & Procedures"
+}
+
+
+{
+  "file_name": "a7e640569380663d2f28ce9b0aa01971.mp3",
+  "summary": "The item price is 24 rupees per cake. Keshav will pay 20 rupees for the rest. If he feels the amount is too high, he will go.",
+  "duration": 141.05,
+  "sentiment": "Neutral",
+  "sentiment_score": -0.223,
+  "topic": "Process & Procedures"
+}
+
+
+{
+  "file_name": "ac9a8e9806fb73fd2450b110cae31971.mp3",
+  "summary": "Manish is busy and will leave a message for the user after the message he has already sent.    - Manish is very busy.",
+  "duration": 6.19,
+  "sentiment": "Negative",
+  "sentiment_score": -0.44,
+  "topic": "Process & Procedures"
+}
+
+{
+  "file_name": "b2eab83223d15ef787c31cbf11a61971.mp3",
+  "summary": "User's pick up was in the middle of 1123. He will get a ticket for 3 to 4 o'clock. It will be valid.",
+  "duration": 27.29,
+  "sentiment": "Neutral",
+  "sentiment_score": 0.421,
+  "topic": "Process & Procedures"
+}
+
+
+{
+  "file_name": "b040043c88fc9bb546cd70336d381971.mp3",
+  "summary": "Agent doesn't know who is calling him, so he assumes it's booking a meeting for him. He's not sure if it's for him or for someone else.",
+  "duration": 89.71,
+  "sentiment": "Neutral",
+  "sentiment_score": -0.273,
+  "topic": "Offers & Promotions"
+}

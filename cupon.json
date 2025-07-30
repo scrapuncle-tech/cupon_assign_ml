@@ -1,0 +1,53 @@
+{
+  "High": [
+    {
+      "code": "BIGSAVE200",
+      "discount_amount": 200,
+      "message": "We miss you! Here's ₹200 OFF your next scrap pickup. Use code: BIGSAVE200. Valid for 15 days."
+    },
+    {
+      "code": "COMEBACK150",
+      "discount_amount": 150,
+      "message": "A special offer just for you! Get ₹150 off your next scrap pickup with ScrapUncle. Use code: COMEBACK150."
+    },
+    {
+      "code": "HVU175",
+      "discount_amount": 175,
+      "message": "Thanks for being a valuable customer! Enjoy ₹175 off your next pickup. Use code: HVU175."
+    }
+  ],
+  "Mid": [
+    {
+      "code": "SCRAP100",
+      "discount_amount": 100,
+      "message": "Get ₹100 off your next scrap pickup! Use code: SCRAP100 before it expires."
+    },
+    {
+      "code": "SAVE75",
+      "discount_amount": 75,
+      "message": "You've unlocked ₹75 savings on your next ScrapUncle pickup! Use code: SAVE75."
+    },
+    {
+      "code": "RECYCLE50",
+      "discount_amount": 50,
+      "message": "Enjoy ₹50 off as a token of our appreciation! Use code: RECYCLE50."
+    }
+  ],
+  "Low": [
+    {
+      "code": "WELCOME10",
+      "discount_percent": 10,
+      "message": "Welcome to ScrapUncle! Get 10% extra on your first pickup. Use code: WELCOME10."
+    },
+    {
+      "code": "THANKYOU",
+      "discount_amount": 0,
+      "message": "Thank you for choosing to recycle with ScrapUncle! Every bit helps."
+    },
+    {
+      "code": "FUTUREOFFER",
+      "discount_amount": 0,
+      "message": "Thanks for recycling with us! Stay tuned for exciting future offers and rewards."
+    }
+  ]
+}
