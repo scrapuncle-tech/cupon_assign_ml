@@ -1,10 +1,55 @@
+[
+  {
+    "summary": "User will pay Agent 2 rupees for the old and new clothes. Agent will be waiting for the T.V. for the next few days.",
+    "duration": 174.1,
+    "sentiment": "Neutral",
+    "sentiment_score": -0.033,
+    "topic": "Offers & Promotions"
+  },
+  {
+    "summary": "User wants to buy 10-12 tons of steel from Kutki Steel for 40 rupees per cup. He will share a photo of the high list with Agent.",
+    "duration": 54.65,
+    "sentiment": "Neutral",
+    "sentiment_score": 0.011,
+    "topic": "Process & Procedures"
+  },
+  {
+    "summary": "User's pick up will be around 4 to 5 pm today. Agent will try to pick it up before that. User wants it done as fast as possible.",
+    "duration": 54.43,
+    "sentiment": "Neutral",
+    "sentiment_score": 0.219,
+    "topic": "Offers & Promotions"
+  },
+  {
+    "summary": "Agent wants to know what Scrap is. The price of scrap is confirmed by system prices. It will be 50 kgs.",
+    "duration": 95.47,
+    "sentiment": "Neutral",
+    "sentiment_score": -0.081,
+    "topic": "Process & Procedures"
+  },
+  {
+    "summary": "The exercise is almost 2 years old and is not being used. It is just kept there, so it is not used. Agent doesn't think it's recorded.",
+    "duration": 87.19,
+    "sentiment": "Negative",
+    "sentiment_score": -0.59,
+    "topic": "Offers & Promotions"
+  },
+  {
+    "summary": "User wants to pick up from A103 today, but the phone is in a secure state. The pick up can be scheduled for tomorrow for 9th day. Agent will call him first.",
+    "duration": 54,
+    "sentiment": "Neutral",
+    "sentiment_score": 0.141,
+    "topic": "Process & Procedures"
+  },
+
+
 {
   "summary": "User will pay Agent 2 rupees for the old and new clothes. Agent will be waiting for the T.V. for the next few days. ",
   "duration": 174.1,
   "sentiment": "Neutral",
   "sentiment_score": -0.033,
   "topic": "Offers & Promotions"
-}
+},
 
 {
   "summary": "User wants to buy 10-12 tons of steel from Kutki Steel for 40 rupees per cup. He will share a photo of the high list with Agent.",
@@ -12,7 +57,7 @@
   "sentiment": "Neutral",
   "sentiment_score": 0.011,
   "topic": "Process & Procedures"
-}
+},
 
 {
   "summary": "User's pick up will be around 4 to 5 pm today. Agent will try to pick it up before that. User wants it done as fast as possible.",
@@ -20,7 +65,7 @@
   "sentiment": "Neutral",
   "sentiment_score": 0.219,
   "topic": "Offers & Promotions"
-}
+},
 
 {
   "summary": "Agent wants to know what Scrap is. The price of scrap is confirmed by system prices. It will be 50 kgs.",
@@ -28,7 +73,7 @@
   "sentiment": "Neutral",
   "sentiment_score": -0.081,
   "topic": "Process & Procedures"
-}
+},
 
 {
   "summary": "The exercise is almost 2 years old and is not being used. It is just kept there, so it is not used. Agent doesn't think it's recorded.",
@@ -36,7 +81,7 @@
   "sentiment": "Negative",
   "sentiment_score": -0.59,
   "topic": "Offers & Promotions"
-}
+},
 
 {
   "summary": "User wants to pick up from A103 today, but the phone is in a secure state. The pick up can be scheduled for tomorrow for 9th day. Agent will call him first.",
@@ -44,7 +89,7 @@
   "sentiment": "Neutral",
   "sentiment_score": 0.141,
   "topic": "Process & Procedures"
-}
+},
 
 
 {
@@ -53,7 +98,7 @@
   "sentiment": "Neutral",
   "sentiment_score": -0.181,
   "topic": "Process & Procedures"
-}
+},
 
 
 {
@@ -62,7 +107,7 @@
   "sentiment": "Neutral",
   "sentiment_score": -0.333,
   "topic": "Offers & Promotions"
-}
+},
 
 
 {
@@ -71,7 +116,7 @@
   "sentiment": "Neutral",
   "sentiment_score": -0.145,
   "topic": "Process & Procedures"
-}
+},
 
 
 {
@@ -80,7 +125,7 @@
   "sentiment": "Neutral",
   "sentiment_score": 0.016,
   "topic": "Offers & Promotions"
-}
+},
 
 
 {
@@ -89,7 +134,7 @@
   "sentiment": "Neutral",
   "sentiment_score": -0.079,
   "topic": "Process & Procedures"
-}
+},
 
 {
   "file_name": "56f9c1529f87768a6ebe81ba8b9b1971.mp3",
@@ -98,7 +143,7 @@
   "sentiment": "Neutral",
   "sentiment_score": -0.195,
   "topic": "Offers & Promotions"
-}
+},
 
 
 {
@@ -108,7 +153,7 @@
   "sentiment": "Neutral",
   "sentiment_score": -0.11,
   "topic": "Process & Procedures"
-}
+},
 
 {
   "file_name": "88fe5b7d5a34957896f406b00d221971.mp3",
@@ -117,7 +162,7 @@
   "sentiment": "Neutral",
   "sentiment_score": -0.232,
   "topic": "Process & Procedures"
-}
+},
 
 
 {
@@ -127,7 +172,7 @@
   "sentiment": "Neutral",
   "sentiment_score": 0.021,
   "topic": "Process & Procedures"
-}
+},
 
 
 {
@@ -137,7 +182,7 @@
   "sentiment": "Positive",
   "sentiment_score": 0.802,
   "topic": "Offers & Promotions"
-}
+},
 
 
 {
@@ -147,7 +192,7 @@
   "sentiment": "Negative",
   "sentiment_score": -0.896,
   "topic": "Process & Procedures"
-}
+},
 
 
 {
@@ -157,7 +202,7 @@
   "sentiment": "Neutral",
   "sentiment_score": 0.082,
   "topic": "Process & Procedures"
-}
+},
 
 
 {
@@ -167,7 +212,7 @@
   "sentiment": "Neutral",
   "sentiment_score": 0.229,
   "topic": "Process & Procedures"
-}
+},
 
 
 {
@@ -177,8 +222,8 @@
   "sentiment": "Neutral",
   "sentiment_score": -0.209,
   "topic": "Process & Procedures"
-}
-
+},
+{
 
  "file_name": "036545bc053fbea7d48f08dbf0e11971.mp3",
   "summary": "User booked Agent's hotel on the name of Pudan Tijer. Agent booked his hotel on Unam Saneja's name. The hotel is in the 3rd floor, on the third floor. ",
@@ -186,8 +231,7 @@
   "sentiment": "Neutral",
   "sentiment_score": -0.043,
   "topic": "Process & Procedures"
-
-
+},
 {
   "file_name": "1673012694d8f3f83151807e98bf1971.mp3",
   "summary": "Agent is in South City 1, Gurgaon. He has a lot of old washing machines. The top load costs 1000 rupees. The price of clothes is 2 rupees per KG. He can only pick it up tomorrow. He will add it to his account.",
@@ -195,7 +239,7 @@
   "sentiment": "Neutral",
   "sentiment_score": -0.416,
   "topic": "Process & Procedures"
-}
+},
 
 
 {
@@ -205,7 +249,7 @@
   "sentiment": "Neutral",
   "sentiment_score": -0.005,
   "topic": "Process & Procedures"
-}
+},
 
 
 {
@@ -215,7 +259,7 @@
   "sentiment": "Neutral",
   "sentiment_score": -0.223,
   "topic": "Process & Procedures"
-}
+},
 
 
 {
@@ -225,7 +269,7 @@
   "sentiment": "Negative",
   "sentiment_score": -0.44,
   "topic": "Process & Procedures"
-}
+},
 
 {
   "file_name": "b2eab83223d15ef787c31cbf11a61971.mp3",
@@ -234,7 +278,7 @@
   "sentiment": "Neutral",
   "sentiment_score": 0.421,
   "topic": "Process & Procedures"
-}
+},
 
 
 {
@@ -245,3 +289,6 @@
   "sentiment_score": -0.273,
   "topic": "Offers & Promotions"
 }
+]
+
+

@@ -6,6 +6,10 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
+from sklearn.decomposition import PCA
+from sklearn.linear_model import LogisticRegression
+import matplotlib.pyplot as plt
+import seaborn as sns
 import warnings
 import joblib
 
@@ -67,6 +71,19 @@ def train_coupon_model():
     train_df['avg_competitiveness'] = train_df['preferred_categories'].apply(calculate_avg_competitiveness)
     test_df['avg_competitiveness'] = test_df['preferred_categories'].apply(calculate_avg_competitiveness)
 
+    # --- Generate and Visualize Feature Correlation Matrix ---
+    print("\n🔥 Feature Correlation Matrix:")
+
+    # Select only numerical features for the correlation matrix
+    numerical_features = train_df.select_dtypes(include=np.number).columns
+    correlation_matrix = train_df[numerical_features].corr()
+
+    # Plotting the heatmap
+    plt.figure(figsize=(14, 10))
+    sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt='.2f', linewidths=.5)
+    plt.title('Feature Correlation Matrix')
+    plt.show()
+
     # Encode user_type
     for df in [train_df, test_df]:
         df['user_type_encoded'] = df['user_type'].astype('category').cat.codes
@@ -86,7 +103,6 @@ def train_coupon_model():
 
     # --- Labeling for Training ---
     train_df['label'] = train_df.apply(lambda row: label_user(row, row['avg_margin']), axis=1)
-    # For test set, use assigned_coupon or coupon_tier for evaluation only, not for training
 
     # --- Data Preparation ---
     features_to_drop = [
@@ -99,7 +115,6 @@ def train_coupon_model():
     y_train = train_df['label']
 
     X_test = test_df.drop(columns=features_to_drop, errors='ignore')
-    # For test, use assigned_coupon/coupon_tier for evaluation
 
     categorical_features = X_train.select_dtypes(include=['object', 'bool']).columns
     numerical_features = X_train.select_dtypes(include=np.number).columns
@@ -112,32 +127,55 @@ def train_coupon_model():
         remainder='passthrough'
     )
 
+    # --- Visualize Explained Variance by PCA Components ---
+    print("\n📊 PCA Analysis:")
+    preprocessor.fit(X_train)
+    X_train_processed = preprocessor.transform(X_train)
 
-    # Try multiple models
-    from sklearn.linear_model import LogisticRegression
-    from sklearn.ensemble import RandomForestClassifier
+    pca_test = PCA().fit(X_train_processed)
+
+    plt.figure(figsize=(10, 6))
+    plt.plot(np.cumsum(pca_test.explained_variance_ratio_))
+    plt.xlabel('Number of Components')
+    plt.ylabel('Cumulative Explained Variance')
+    plt.title('Explained Variance by PCA Components')
+    plt.grid(True)
+    plt.show()
+
+    # Determine optimal number of components (where curve starts to flatten)
+    cumulative_variance = np.cumsum(pca_test.explained_variance_ratio_)
+    optimal_components = np.argmax(cumulative_variance >= 0.95) + 1
+    print(f"Optimal number of PCA components: {optimal_components} (95% variance explained)")
+
+    # --- Model Training with Multiple Algorithms ---
     try:
         from xgboost import XGBClassifier
         xgb_available = True
     except ImportError:
         xgb_available = False
 
-    models = [
-        ('RandomForest', RandomForestClassifier(n_estimators=100, random_state=42, class_weight='balanced')),
-        ('LogisticRegression', LogisticRegression(max_iter=1000, class_weight='balanced'))
+    # Define models with and without PCA
+    models_without_pca = [
+        ('RandomForest', RandomForestClassifier(n_estimators=200, random_state=42, class_weight='balanced', max_depth=10)),
+        ('LogisticRegression', LogisticRegression(max_iter=1000, class_weight='balanced', C=1.0))
     ]
+    
+    models_with_pca = [
+        ('RandomForest_PCA', RandomForestClassifier(n_estimators=200, random_state=42, class_weight='balanced', max_depth=10)),
+        ('LogisticRegression_PCA', LogisticRegression(max_iter=1000, class_weight='balanced', C=1.0))
+    ]
+    
     if xgb_available:
-        models.append(('XGBoost', XGBClassifier(n_estimators=100, random_state=42, use_label_encoder=False, eval_metric='mlogloss')))
-
+        models_without_pca.append(('XGBoost', XGBClassifier(n_estimators=200, random_state=42, use_label_encoder=False, eval_metric='mlogloss')))
+        models_with_pca.append(('XGBoost_PCA', XGBClassifier(n_estimators=200, random_state=42, use_label_encoder=False, eval_metric='mlogloss')))
 
     # Map test assigned_coupon/coupon_tier to numeric labels for comparison
-    # Example mapping: Class 2 (High/₹100), Class 1 (Mid/₹50), Class 0 (Low/No coupon)
     coupon_map = {
         'SCRAP100': 2, 'BIGSAVE200': 2, 'HVU175': 2, 'COMEBACK150': 2,
         'SCRAP50': 1, 'SAVE75': 1, 'RECYCLE50': 1,
         'THANKYOU': 0, 'FUTUREOFFER': 0, 'WELCOME10': 0
     }
-    # If coupon_tier is present, use that; else use assigned_coupon
+    
     if 'coupon_tier' in test_df.columns:
         tier_map = {'High': 2, 'Mid': 1, 'Low': 0}
         y_true = test_df['coupon_tier'].map(tier_map).fillna(0).astype(int)
@@ -150,7 +188,10 @@ def train_coupon_model():
     best_model = None
     best_name = ''
     best_pred = None
-    for name, clf in models:
+
+    # Test models without PCA
+    print("\n🔍 Testing Models Without PCA:")
+    for name, clf in models_without_pca:
         pipe = Pipeline([
             ('preprocessor', preprocessor),
             ('classifier', clf)
@@ -158,29 +199,59 @@ def train_coupon_model():
         pipe.fit(X_train, y_train)
         y_pred = pipe.predict(X_test)
         acc = accuracy_score(y_true, y_pred)
-        print(f"\n{name} Accuracy: {acc:.2%}")
-        print(classification_report(y_true, y_pred, labels=[2,1,0], target_names=['High','Mid','Low']))
+        print(f"{name} Accuracy: {acc:.2%}")
         if acc > best_acc:
             best_acc = acc
             best_model = pipe
             best_name = name
             best_pred = y_pred
 
+    # Test models with PCA
+    print(f"\n🔍 Testing Models With PCA ({optimal_components} components):")
+    for name, clf in models_with_pca:
+        pipe = Pipeline([
+            ('preprocessor', preprocessor),
+            ('pca', PCA(n_components=optimal_components)),
+            ('classifier', clf)
+        ])
+        pipe.fit(X_train, y_train)
+        y_pred = pipe.predict(X_test)
+        acc = accuracy_score(y_true, y_pred)
+        print(f"{name} Accuracy: {acc:.2%}")
+        if acc > best_acc:
+            best_acc = acc
+            best_model = pipe
+            best_name = name
+            best_pred = y_pred
+
+    # Save the best model
     joblib.dump(best_model, 'coupon_classifier_model.joblib')
     print(f"\n💾 Best model saved: {best_name} (Accuracy: {best_acc:.2%})")
 
-    # --- Prediction & Evaluation ---
-    y_pred = best_pred
-
-    print("\nOverall Model Accuracy: {:.2%}".format(accuracy_score(y_true, y_pred)))
+    # --- Final Evaluation ---
+    print(f"\n🏆 Final Results:")
+    print(f"Best Model: {best_name}")
+    print(f"Accuracy: {best_acc:.2%}")
+    
     print("\nClassification Report (Performance per Tier):")
-    print(classification_report(y_true, y_pred, labels=[2,1,0], target_names=['High','Mid','Low']))
+    print(classification_report(y_true, best_pred, labels=[2,1,0], target_names=['High','Mid','Low']))
 
     print("\n📋 Example Predictions vs. Actual Values:")
     result_df = test_df.copy()
-    result_df['Predicted_Tier'] = y_pred
+    result_df['Predicted_Tier'] = best_pred
     result_df['Actual_Tier'] = y_true
     print(result_df[['user_id', 'Actual_Tier', 'assigned_coupon', 'Predicted_Tier']].head(10))
+
+    # Confusion Matrix
+    cm = confusion_matrix(y_true, best_pred, labels=[2,1,0])
+    plt.figure(figsize=(8, 6))
+    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', 
+                xticklabels=['High', 'Mid', 'Low'], 
+                yticklabels=['High', 'Mid', 'Low'])
+    plt.title('Confusion Matrix')
+    plt.ylabel('True Label')
+    plt.xlabel('Predicted Label')
+    plt.show()
 
 if __name__ == '__main__':
     train_coupon_model()
